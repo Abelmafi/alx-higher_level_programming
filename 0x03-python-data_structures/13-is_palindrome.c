@@ -32,7 +32,7 @@ bool compare(listint_t **head, listint_t *second_head)
 {
 	listint_t *first = *head, *second = second_head;
 
-	while (first)
+	while (first && second)
 	{
 		if (first->n != second->n)
 			return (0);
@@ -50,11 +50,13 @@ bool compare(listint_t **head, listint_t *second_head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow, *fast, *mid, *slowprev, *second;
-	bool check = 0;
+	listint_t *slow, *fast, *mid = NULL, *slowprev, *second;
+	bool check = true;
 
 	slow = *head;
 	fast = *head;
+	if (*head == NULL)
+		return (1);
 	while (fast && fast->next)
 	{
 		fast = fast->next->next;
