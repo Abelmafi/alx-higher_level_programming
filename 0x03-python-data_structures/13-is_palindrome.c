@@ -9,7 +9,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp, *tmp2;
+	listint_t *tmp, *tmp2, *tmp3;
 	int size = 1, j = 0, i = 0, mid;
 
 	if (*head == NULL)
@@ -21,23 +21,20 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 		size++;
 	}
+	tmp3 = tmp;
 	tmp->next = tmp2;
 	mid = size / 2;
 	for (i = 0; i < mid; i++)
 	{
 		if (tmp2->n != tmp->n)
 		{
-			while (tmp->next != *head)
-				tmp = tmp->next;
-			tmp->next = NULL;
+			tmp3 = NULL;
 			return (0);
 		}
 		for (j = 0; j < size - 1; j++)
 			tmp = tmp->next;
 		tmp2 = tmp2->next;
 	}
-	while (tmp->next != *head)
-		tmp = tmp->next;
-	tmp->next = NULL;
+	tmp3->next = NULL;
 	return (1);
 }
