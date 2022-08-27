@@ -10,31 +10,36 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp, *tmp2;
-	int size = 0, j = 0, i = 0, mid, *s;
+	int size = 1, j = 0, i = 0, mid;
 
 	if (*head == NULL)
 		return (1);
 	tmp = *head;
 	tmp2 = *head;
-	while (tmp)
+	while (tmp->next)
 	{
 		tmp = tmp->next;
 		size++;
 	}
-	s = (int *)malloc(sizeof(int) * size + 1);
-	while (tmp2)
+	/**
+	 * s = (int *)malloc(sizeof(int) * size + 1);
+	 * while (tmp2)
+	 * {
+	 * s[j] = tmp2->n;
+	 * tmp2 = tmp2->next;
+	 * j++;
+	 * }
+	 * j--;
+	 */
+	tmp->next = tmp2;
+	mid = size / 2;
+	for (i = 0; i < mid; i++)
 	{
-		s[j] = tmp2->n;
-		tmp2 = tmp2->next;
-		j++;
-	}
-	j--;
-	mid = j / 2;
-	for (; j > mid; j--)
-	{
-		if (s[j] != s[i])
+		if (tmp2->n != tmp->n)
 			return (0);
-		i++;
+		for (j = 0; j < size - 1; j++)
+			tmp = tmp->next;
+		tmp2 = tmp2->next;
 	}
 	return (1);
 }
