@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 	{
 		if (tmp2->n != tmp->n)
 		{
-			tmp3 = NULL;
+			tmp3->next = NULL;
 			return (0);
 		}
 		for (j = 0; j < size - 1; j++)
