@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     tuple_r = ()
-    if len(sentences) == 0:
+    if len(sentence) == 0:
         tuple_r = (0, None)
     else:
         tuple_r += (len(sentence), sentence[0],)
