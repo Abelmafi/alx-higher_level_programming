@@ -10,7 +10,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp, *tmp2;
-	int size = 0, j = 0, i, mid, *s;
+	int size = 0, j = 0, i = 0, mid, *s;
 
 	if (*head == NULL)
 		return (1);
@@ -30,10 +30,11 @@ int is_palindrome(listint_t **head)
 	}
 	j--;
 	mid = j / 2;
-	for (i = 0, j; j > mid; j--, i++)
+	for (; j > mid; j--)
 	{
 		if (s[j] != s[i])
 			return (0);
+		i++;
 	}
 	return (1);
 }
