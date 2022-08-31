@@ -7,10 +7,10 @@ def roman_to_int(roman_string):
     i = 0
     if is_roman_num(roman_l) is False:
         return (0)
+    elif type(roman_string) != str:
+        return (0)
     while i < len(roman_l):
-        if roman_l[i] not in base.keys():
-            return (0)
-        elif i + 1 < len(roman_l):
+        if i + 1 < len(roman_l):
             if base[roman_l[i]] >= base[roman_l[i + 1]]:
                 roman_number += base[roman_l[i]]
             else:
