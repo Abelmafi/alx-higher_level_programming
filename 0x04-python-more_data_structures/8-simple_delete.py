@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    new_dict = dict(a_dictionary)
-    for i in new_dict.keys():
+    for i in a_dictionary:
         if i == key:
-            del new_dict[key]
+            del a_dictionary[key]
             break
         else:
             continue
-    return (dict(new_dict))
+    return (dict(a_dictionary))
