@@ -2,6 +2,7 @@
 def roman_to_int(roman_string):
     base = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     roman_l = list(roman_string)
+    roman_l = list(map(lambda x: x.upper(), roman_l))
     roman_number = 0
     i = 0
     if is_roman_num(roman_l) is False:
