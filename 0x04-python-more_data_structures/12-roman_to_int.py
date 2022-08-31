@@ -9,6 +9,8 @@ def roman_to_int(roman_string):
     while i < len(roman_list):
         if roman_string[i] not in base_dict.keys():
             return (0)
+        elif roman_list.count(roman_list[i]) > 3:
+            return (0)
         elif i + 1 < len(roman_list):
             if base_dict[roman_list[i]] >= base_dict[roman_list[i + 1]]:
                 roman_number += base_dict[roman_list[i]]
