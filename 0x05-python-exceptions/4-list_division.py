@@ -13,7 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
         except ZeroDivisionError:
             j = 0
-            print("division by zero")
+            print("division by 0")
         finally:
             my_list.append(j)
     return (my_list)
