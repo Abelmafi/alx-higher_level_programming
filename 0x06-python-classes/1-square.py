@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""Defining class squire"""
+"""Defining class squire."""
 
 
 class Square:
-    """Initilizing attributes"""
+    """Initilizing attributes."""
 
-    def __init__(self, size = 0):
+    def __init__(self, size):
         """initilizing private object variables.
 
         Args:
