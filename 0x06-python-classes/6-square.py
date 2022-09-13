@@ -7,18 +7,18 @@ class Square:
     """passing values to class objects."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """initilising object vsriables.
+        """Initilising object variables.
 
         Args:
             size (int): squire size sizes.
             position (int, int): squire co-ordinates position.
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
-        """Get size."""
+        """Get/set size of square."""
         return (self.__size)
 
     @size.setter
