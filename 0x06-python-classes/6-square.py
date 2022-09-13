@@ -11,7 +11,7 @@ class Square:
 
         Args:
             size (int): squire size sizes.
-            position (tuple): squire co-ordinates.
+            position (int, int): squire co-ordinates.
         """
         self.__size = size
         self.__position = position
@@ -22,12 +22,12 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, size):
-        self.__size = size
-        if type(self.__size) is not int:
+    def size(self, value):
+        if type(value) is not int):
             raise TypeError('size must be an integer')
-        if self.__size < 0:
+        if value < 0:
             raise ValueError('size must be >= 0')
+        self.__size = value
 
     @property
     def position(self):
