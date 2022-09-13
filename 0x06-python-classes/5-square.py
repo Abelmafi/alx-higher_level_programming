@@ -14,7 +14,6 @@ class Square:
         """
         self.__size = size
 
-
     @property
     def size(self):
         """Get object attributes."""
@@ -41,4 +40,3 @@ class Square:
                 for j in range(self.__size):
                     print('#', end="")
                 print("")
-
