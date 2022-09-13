@@ -36,10 +36,9 @@ class Square:
 
     @position.setter
     def position(self, position):
-        self.__position = position
-
-        if type(self.__position) is not tuple or len(self.__position) != 2:
+        if not isinstance(position, tuple) or len(position) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = position
 
     def area(self):
         """calculate area."""
@@ -49,12 +48,13 @@ class Square:
         """print squire using '#' charactor."""
         if self.__size == 0:
             print("")
-        elif self.__size > 0:
-            for l in range(self.__position[1]):
-                print("")
-            for i in range(self.__size):
-                for k in range(self.__position[0]):
-                    print(" ", end="")
-                for j in range(self.__size):
-                    print('#', end="")
-                print("")
+            return
+
+        for l in range(self.__position[1]):
+            print("")
+        for i in range(self.__size):
+            for k in range(self.__position[0]):
+                print(" ", end="")
+            for j in range(self.__size):
+                print('#', end="")
+            print("")
