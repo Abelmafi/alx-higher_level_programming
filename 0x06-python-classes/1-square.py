@@ -11,5 +11,6 @@ class Square:
 
         Args:
             size (int): size of squire sizes.
+
         """
         self.__size = size
