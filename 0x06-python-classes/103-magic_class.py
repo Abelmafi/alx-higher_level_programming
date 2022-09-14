@@ -11,7 +11,8 @@ class MagicClass:
     """kfkfk"""
 
     def __init__(self, _MagicClass__radius=0):
-        if (type(_MagicClass__radius) is not int) and (type(_MagicClass__radius) is not float):
+        if ((type(_MagicClass__radius) is not int) and
+                (type(_MagicClass__radius) is not float)):
             raise TypeError('radius must be a number')
         self._MagicClass__radius = _MagicClass__radius
 
