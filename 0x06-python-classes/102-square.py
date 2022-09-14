@@ -54,6 +54,7 @@ class Square:
     def __ne__(self, other):
         """not equal to."""
         return self.__size != other.__size
+
     def __eq__(self, other):
         """equal to."""
         return self.__size == other.__size
