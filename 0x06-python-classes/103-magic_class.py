@@ -20,6 +20,3 @@ class MagicClass:
 
     def circumference(self):
         return (2 * math.pi * self._MagicClass__radius)
-
-mc = MagicClass(10)
-print("{:.2f}".format(mc.circumference()))
