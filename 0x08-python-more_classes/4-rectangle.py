@@ -68,5 +68,5 @@ class Rectangle:
         """Retutrns  string representation of the rectangle to be able
         to recreate a new instance by using eval()"""
         rec = "Rectangle(" + str(self.__width)
-        rec += "," + str(self.__height) + ")"
+        rec += ", " + str(self.__height) + ")"
         return rec
