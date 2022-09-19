@@ -2,6 +2,6 @@
 """Defines empty rectangle cass."""
 
 
-class Reuctangle:
+class Rectangle:
     """Represent a rectangle."""
     pass
