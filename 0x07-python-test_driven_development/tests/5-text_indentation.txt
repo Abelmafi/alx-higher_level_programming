@@ -1,0 +1,90 @@
+=================================
+The ``5-text_indentation`` module
+=================================
+
+this mof=dule defines intiger sum function ``text_indentation(a, b=98)``
+
+Usage
+=====
+
+```text_indentation(...)``` prints a text with 2 new lines after each of these characters: ., ? and :.:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation("""Lorem ipsum: dolor sit amet, consectetur? adipiscing elit. Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:""")
+	Lorem ipsum:
+	<BLANKLINE>
+	dolor sit amet, consectetur?
+	<BLANKLINE>
+	adipiscing elit.
+	<BLANKLINE>
+	Non autem hoc:
+	<BLANKLINE>
+	igitur ne illud quidem.
+	<BLANKLINE>
+	Fortasse id optimum, sed ubi illud:
+	<BLANKLINE>
+
+Space at the start of text:
+
+	>>> text_indentation("""                Lorem ipsum: dolor sit amet, consectetur? adipiscing elit. Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:""")
+	Lorem ipsum:
+        <BLANKLINE>
+        dolor sit amet, consectetur?
+        <BLANKLINE>
+        adipiscing elit.
+        <BLANKLINE>
+        Non autem hoc:
+        <BLANKLINE>
+        igitur ne illud quidem.
+        <BLANKLINE>
+        Fortasse id optimum, sed ubi illud:
+        <BLANKLINE>
+
+Space at the end of each unique character:
+
+	>>> text_indentation("""Lorem ipsum:                    dolor sit amet, consectetur?                      adipiscing elit.                          Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:""")
+	Lorem ipsum:
+        <BLANKLINE>
+        dolor sit amet, consectetur?
+        <BLANKLINE>
+        adipiscing elit.
+        <BLANKLINE>
+        Non autem hoc:
+        <BLANKLINE>
+        igitur ne illud quidem.
+        <BLANKLINE>
+        Fortasse id optimum, sed ubi illud:
+        <BLANKLINE>
+
+new line at the end of line:
+
+	>>> text_indentation("""Lorem ipsum: dolor sit amet, consectetur? adipiscing elit.\nNon autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:\n""")
+	Lorem ipsum:
+        <BLANKLINE>
+        dolor sit amet, consectetur?
+        <BLANKLINE>
+        adipiscing elit.
+        <BLANKLINE>
+	<BLANKLINE>
+        Non autem hoc:
+        <BLANKLINE>
+        igitur ne illud quidem.
+        <BLANKLINE>
+        Fortasse id optimum, sed ubi illud:
+        <BLANKLINE>
+	<BLANKLINE>
+
+Error handling:
+===============
+
+	>>> text_indentation(1234)
+	Traceback (most recent call last):
+        ...
+        TypeError: text must be string
+
+::
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+        ...
+        TypeError: text must be string

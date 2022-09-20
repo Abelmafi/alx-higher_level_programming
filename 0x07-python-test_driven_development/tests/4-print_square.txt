@@ -1,0 +1,58 @@
+==============================
+The ``4-print_square`` module
+==============================
+
+this module defines print squire finction ``print_square(size):``
+
+Usage
+=====
+
+```4-print_square(...)``` print a squire using # character with given size.:
+
+::
+
+        >>> print_square = __import__('4-print_square').print_square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+::
+
+	>>> print_square(0)
+	
+
+
+Raise-Errors
+============
+
+``print_square(size)`` expects that both arguments only integers > 0.
+If either argument is a non-integer, a TypeError is raised and valueError for negative intigers:
+
+	>>> print_square(-1.2)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+::
+
+	>>> print_square("hello")
+	Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+::
+
+	>>> print_square(-3)
+	Traceback (most recent call last):
+        ...
+        ValueError: size must be >= 0
+
+::
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
