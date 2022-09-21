@@ -38,6 +38,20 @@ A minimum of two arguments must be provided. Otherwise, a TypeError is raised.
 
 ::
 
+	>>> matrix_mul([1, 2], [[3, 4]])
+	Traceback (most recent call last):
+	...
+	TypeError: m_a must be a list of lists
+
+::
+
+	>>> matrix_mul([[1, 2]], [3, 4])
+	Traceback (most recent call last):
+	...
+	TypeError: m_b must be a list of lists
+
+::
+
 	>>> matrix_mul([[1, 2]]) # doctest: +NORMALIZE_WHITESPACE
 	Traceback (most recent call last):
 	...
