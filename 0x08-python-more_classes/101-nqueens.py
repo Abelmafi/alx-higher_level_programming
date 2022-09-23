@@ -48,6 +48,9 @@ if __name__ == '__main__':
         s = int(s)
     except ValueError:
         isInt = False
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        exit(1)
     if not isInt:
         print("N must be a number")
         exit(1)
