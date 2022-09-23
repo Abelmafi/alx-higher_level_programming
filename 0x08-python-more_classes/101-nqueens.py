@@ -42,15 +42,17 @@ class Solution:
 
 if __name__ == '__main__':
     import sys
+
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        exit(1)
+
     s = sys.argv[1]
     isInt = True
     try:
         s = int(s)
     except ValueError:
         isInt = False
-    if len(sys.argv) != 2:
-        print("Usage: nqueens N")
-        exit(1)
     if not isInt:
         print("N must be a number")
         exit(1)
