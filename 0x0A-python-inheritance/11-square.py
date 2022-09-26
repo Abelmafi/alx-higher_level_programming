@@ -22,15 +22,15 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         super().integer_validator("width", width)
         super().integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        self.__w = width
+        self.__h = height
 
     def area(self):
         """returns area of rectangle."""
-        return (self.__height * self.__width)
+        return (self.__h * self.__w)
 
     def __str__(self):
-        return "[{}] {}/{}".format(type(self).__name__, self.__width, self.__height)
+        return "[{}] {}/{}".format(type(self).__name__, self.__w, self.__h)
 
 
 class Square(Rectangle):
