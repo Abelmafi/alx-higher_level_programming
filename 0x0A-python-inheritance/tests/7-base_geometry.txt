@@ -46,3 +46,17 @@ Usage
         Traceback (most recent call last):
         ...
         TypeError: sallary must be an integer
+
+::
+
+	>>> bg.integer_validator("sallary", False)
+        Traceback (most recent call last):
+        ...
+        TypeError: sallary must be an integer
+
+::
+
+	>>> bg.integer_validator("sallary", True)
+        Traceback (most recent call last):
+        ...
+        TypeError: sallary must be an integer
