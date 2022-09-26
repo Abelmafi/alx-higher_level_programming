@@ -14,3 +14,13 @@ class BaseGeometry():
             raise TypeError(name + " must be an integer")
         if value <= 0:
             raise ValueError(name + " must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
+    """initilixing argument vriables."""
+
+    def __init__(self, width, height):
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
