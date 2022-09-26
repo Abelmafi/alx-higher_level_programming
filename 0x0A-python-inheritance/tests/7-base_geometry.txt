@@ -97,13 +97,6 @@ Passing dict to method
 	...
 	TypeError: age must be an integer
 
-
-Passing None to method
-	>>> bg.integer_validator("age", None)
-	Traceback (most recent call last):
-	...
-	TypeError: age must be an integer
-
 	>>> bg.area(5)
 	Traceback (most recent call last):
 	...
@@ -114,3 +107,18 @@ Passing two arguments to area method
 	Traceback (most recent call last):
 	...
 	TypeError: area() takes 1 positional argument but 3 were given
+
+	>>> bg.integer_validator("age", 4, 3)
+        Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+	>>> bg.integer_validator("age")
+	Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator(4)
+        Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
