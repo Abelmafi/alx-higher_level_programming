@@ -1,0 +1,48 @@
+============================
+The ``7-base_geometry`` module
+============================
+
+this module defines iniger validator class ``BaseGeometry``
+
+Usage
+=====
+
+```integer_validator(...)``` check and raise if the input data is not int type:
+
+::
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 12)
+
+	>>> bg.integer_validator("name", "john")
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+::
+
+	>>> bg.integer_validator("age", -4)
+        Traceback (most recent call last):
+        ...
+        ValueError: age must be greater than 0
+
+::
+
+	>>> bg.integer_validator("distance", 0)
+        Traceback (most recent call last):
+        ...
+        ValueError: distance must be greater than 0
+
+::
+
+	>>> bg.integer_validator("sallary", 0.5)
+        Traceback (most recent call last):
+        ...
+        TypeError: sallary must be an integer
+
+::
+
+	>>> bg.integer_validator("sallary", None)
+        Traceback (most recent call last):
+        ...
+        TypeError: sallary must be an integer
