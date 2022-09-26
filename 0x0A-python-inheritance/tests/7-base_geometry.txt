@@ -60,3 +60,10 @@ Usage
         Traceback (most recent call last):
         ...
         TypeError: sallary must be an integer
+
+::
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
