@@ -103,3 +103,14 @@ Passing None to method
 	Traceback (most recent call last):
 	...
 	TypeError: age must be an integer
+
+	>>> bg.area(5)
+	Traceback (most recent call last):
+	...
+	TypeError: area() takes 1 positional argument but 2 were given
+
+Passing two arguments to area method
+	>>> bg.area(5, 5)
+	Traceback (most recent call last):
+	...
+	TypeError: area() takes 1 positional argument but 3 were given
