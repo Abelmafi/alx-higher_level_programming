@@ -2,7 +2,7 @@
 """Define BaseGeometry function."""
 
 
-class BaseGeometry():
+class BaseGeometry(object):
     """class with empty area methon."""
 
     def area(self):
