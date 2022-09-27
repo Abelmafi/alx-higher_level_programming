@@ -1,0 +1,41 @@
+========================
+The ``1-my_list`` module
+========================
+
+this module defines a class ``MyClass``
+=====
+Usage
+=====
+
+```print_sorted(...)``` prints list contents on sorting order:
+
+::
+        >>> MyList = __import__('1-my_list').MyList
+        >>> my_l = MyList()
+        >>> my_l.append(5)
+
+::      
+        
+        >>> my_l.append(2)
+        >>> my_l.append(4)
+        >>> my_l.append(1)
+        >>> my_l.append(7)
+        >>> my_l.append(6)
+        >>> print(my_l)
+        [5, 2, 4, 1, 7, 6]
+        
+::      
+        
+        >>> my_l.print_sorted()
+        [1, 2, 4, 5, 6, 7]
+
+::
+
+	>>> my_l.append(-1)
+	>>> my_l.print_sorted()
+	[-1, 1, 2, 4, 5, 6, 7]
+
+::
+
+	>>> print(my_l)
+	[5, 2, 4, 1, 7, 6, -1]
