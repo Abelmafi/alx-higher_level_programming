@@ -39,3 +39,30 @@ Usage
 
 	>>> print(my_l)
 	[5, 2, 4, 1, 7, 6, -1]
+
+::
+
+	>>> my_l.pop()
+	-1
+	>>> my_l.pop()
+	6
+	>>> my_l.pop()
+	7
+	>>> my_l.pop()
+	1
+	>>> my_l.pop()
+	4
+	>>> my_l.pop()
+	2
+	>>> my_l.pop()
+	5
+
+::
+
+	>>> print(my_l)
+	[]
+
+::
+
+	>>> my_l.print_sorted()
+	[]
