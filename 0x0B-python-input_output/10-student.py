@@ -15,6 +15,9 @@ class Student:
         a = {}
         if not attrs:
             return self.__dict__
+        for at in attrs:
+            if not isinstance(at, str):
+                return self.__dict__
         else:
             for attr in attrs:
                 if attr in self.__dict__:
