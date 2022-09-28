@@ -18,8 +18,7 @@ class Student:
         for at in attrs:
             if not isinstance(at, str):
                 return self.__dict__
-        else:
-            for attr in attrs:
-                if attr in self.__dict__:
-                    a[attr] = self.__dict__[attr]
-            return a
+        for attr in attrs:
+            if attr in self.__dict__:
+                a[attr] = self.__dict__[attr]
+        return a
