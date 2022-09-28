@@ -16,7 +16,7 @@ class Student:
         if not attrs:
             return self.__dict__
         for at in attrs:
-            if type(at) not str:
+            if type(at) != str:
                 return self.__dict__
         for attr in attrs:
             if attr in self.__dict__:
