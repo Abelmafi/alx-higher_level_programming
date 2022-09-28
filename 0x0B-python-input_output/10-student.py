@@ -13,7 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation of a Student."""
         a = {}
-        if not attrs:
+        if not attrs and type(attrs) != list:
             return self.__dict__
         for at in attrs:
             if type(at) != str:
