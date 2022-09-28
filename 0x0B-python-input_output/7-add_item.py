@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Defining...."""
+import sys
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-import sys
 
 
 def is_file_empty(file_name):
@@ -11,11 +11,11 @@ def is_file_empty(file_name):
     with open(file_name, 'r') as read_obj:
         one_char = read_obj.read(1)
         if not one_char:
-           return True
+            return True
     return False
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
     py_list = []
 
