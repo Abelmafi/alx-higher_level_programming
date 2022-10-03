@@ -52,7 +52,7 @@ class Base:
     def load_from_file(cls):
         """Returns a list of classes."""
         try:
-            with open(cls.__name__ + ".json", "r+") as fd:
+            with open(str(cls.__name__) + ".json", "r+") as fd:
                 ls = fd.read()
                 ls = cls.from_json_string(ls)
                 bm = [cls.create(**i) for i in ls]
