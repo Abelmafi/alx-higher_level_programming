@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-"""Defining..."""
-from .rectangle import Rectangle
+"""Definines square class"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Initilizing Square parameters."""
+    """Represent squire parameters"""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """Initilizing Square parameters."""
         super().__init__(size, size, x=x, y=y, id=id)
         self.size = size
 
     @property
     def size(self):
         """Size attribute getter."""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
