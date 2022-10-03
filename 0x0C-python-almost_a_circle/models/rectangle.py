@@ -85,6 +85,7 @@ class Rectangle(Base):
 
     def display(self):
         """Prints in stdout the Rectangle instance with the character #"""
+
         [print("") for l in range(self.__y)]
         for i in range(self.__height):
             [print(" ", end="") for k in range(self.__x)]
@@ -93,8 +94,9 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Tiht method assigns an argument to each args attribute."""
+
         ls = ["id", "width", "height", "x", "y"]
-        if args:
+        if args and len(args) != 0:
             for index, arg in enumerate(args):
                 setattr(self, ls[index], arg)
         else:
