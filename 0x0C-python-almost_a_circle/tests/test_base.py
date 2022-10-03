@@ -171,9 +171,9 @@ class TestBase_save_to_file(unittest.TestCase):
         with open("Rectangle.json", "r") as file:
                 self.assertEqual(file.read(), "[]")
 
-    def test_save_to_file_noArg_Rec(self):
+    def test_save_to_file_multiArg_Rec(self):
         with self.assertRaises(TypeError):
-            Rectangle.save_to_file()
+            Rectangle.save_to_file([1], 3)
 
 
 if __name__ == '__main__':
