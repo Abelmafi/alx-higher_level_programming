@@ -5,7 +5,9 @@ import json
 
 class Base:
     """Initilizing class attributes."""
+
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id:
             self.id = id
@@ -15,13 +17,13 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        if list_dictionaries == None:  # or len(list_dictionaries) == 0:
+        if list_dictionaries is None or list_dictionaries == {}:
             return ('"[]"')
         else:
             for listt in list_dictionaries:
                 json.dumps(listt)
             return json.dumps(list_dictionaries)
-    
+
     @staticmethod
     def from_json_string(json_string):
         return json.loads(json_string)
@@ -35,7 +37,7 @@ class Base:
                 rec = cls(1)
             rec.update(**dictionary)
             return rec
-    
+
     @classmethod
     def load_from_file(cls):
         with open(cls.__name__ + ".json", "r+") as fd:
