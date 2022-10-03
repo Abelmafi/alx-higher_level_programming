@@ -38,7 +38,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError('height must be > 0')
         self.__height = value
-    
+
     @property
     def x(self):
         """x argument getter."""
@@ -80,11 +80,12 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Tiht method assigns an argument to each args attribute."""
         ls = ["id", "width", "height", "x", "y"]
-        for index, arg in enumerate(args):
-            setattr(self, ls[index],arg)
-
-        for key, values in kwargs.items():
-            setattr(self, key, values)
+        if args:
+            for index, arg in enumerate(args):
+                setattr(self, ls[index], arg)
+        else:
+            for key, values in kwargs.items():
+                setattr(self, key, values)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangl."""
@@ -97,5 +98,5 @@ class Rectangle(Base):
                 }
 
     def __str__(self):
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
-                self.__x, self.__y, self.__width, self.__height)
+        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+                self.__x, self.__y, self.__width, self.__height))
