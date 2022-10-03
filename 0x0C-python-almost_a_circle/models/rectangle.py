@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defining..."""
-from .base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -8,6 +8,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
+
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
