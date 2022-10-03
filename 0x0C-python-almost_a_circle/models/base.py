@@ -42,7 +42,7 @@ class Base:
         """create dictionary representation of list object."""
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                rec = cls(1, 1, 9, 9, 4)
+                rec = cls(1, 2)
             else:
                 rec = cls(1)
             rec.update(**dictionary)
