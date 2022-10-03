@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defining..."""
+"""Defining a rectangle class"""
 from models.base import Base
 
 
@@ -99,7 +99,7 @@ class Rectangle(Base):
         if args and len(args) != 0:
             for index, arg in enumerate(args):
                 setattr(self, ls[index], arg)
-        else:
+        elif kwargs and len(kwargs) != 0:
             for key, values in kwargs.items():
                 setattr(self, key, values)
 
@@ -115,5 +115,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """return string representation of class attribute."""
-        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
-                self.__x, self.__y, self.__width, self.__height))
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                        self.__y, self.__width,
+                                                        self.__height)
