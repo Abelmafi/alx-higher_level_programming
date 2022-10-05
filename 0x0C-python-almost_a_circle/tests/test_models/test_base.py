@@ -131,14 +131,14 @@ class TestBase_save_to_file(unittest.TestCase):
         r1 = Rectangle(1, 2, 3, 4, 5)
         Rectangle.save_to_file([r1])
         with open("Rectangle.json", "r") as file:
-                self.assertEqual(len(file.read()), 100)
+                self.assertEqual(len(file.read()), 52)
 
     def test_save_to_file_two_Rec(self):
         r1 = Rectangle(1, 2, 3, 4, 5)
         r2 = Rectangle(3, 4, 5, 5, 7)
         Rectangle.save_to_file([r1, r2])
         with open("Rectangle.json", "r") as file:
-                self.assertEqual(len(file.read()), 200)
+                self.assertEqual(len(file.read()), 104)
 
     def test_save_to_file_one_Squ(self):
         s1 = Square(2, 3, 4, 5)
@@ -159,7 +159,7 @@ class TestBase_save_to_file(unittest.TestCase):
         r1 = Rectangle(1, 2)
         Rectangle.save_to_file([r1])
         with open("Rectangle.json", "r") as file:
-                self.assertEqual(len(file.read()), 101)
+                self.assertEqual(len(file.read()), 53)
 
     def test_save_to_file_None(self):
         Rectangle.save_to_file(None)
@@ -178,4 +178,3 @@ class TestBase_save_to_file(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -14,7 +14,7 @@ class TestSquare_instantation(unittest.TestCase):
     def test_is_Base(self):
         self.assertIsInstance(Square(10), Base)
 
-    def test_is_Rectangle(self):
+    def test_is_Square(self):
         self.assertIsInstance(Square(10), Square)
 
     def test_no_arg(self):
@@ -341,3 +341,7 @@ class TestSquare_to_Dictonary(unittest.TestCase):
         s1 = Square(10, 0, 0, 1)
         s1_dictionary = s1.to_dictionary()
         self.assertDictEqual(s1_dictionary, {'id': 1, 'x': 0, 'size': 10, 'y': 0})
+
+
+if __name__ == '__main__':
+    unittest.main()
