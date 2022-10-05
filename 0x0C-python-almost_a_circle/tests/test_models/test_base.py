@@ -5,6 +5,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase_instantation(unittest.TestCase):
     """Define unittest for base instantation"""
 
