@@ -1,5 +1,11 @@
 #!/usr/bin/node
-const arr = require('./100-data');
-const newList = arr.list.map((elem, idx) => elem * idx);
-console.log(arr.list);
-console.log(newList);
+const dict = require('./101-data').dict;
+const newDict = {};
+for (const key in dict) {
+  if (newDict[dict[key]]) {
+    newDict[dict[key]].push(key);
+  } else {
+    newDict[dict[key]] = [key];
+  }
+}
+console.log(newDict);
