@@ -12,7 +12,6 @@ class State(Base):
     """ class definition of a State"""
 
     __tablename__ = 'states'
-    id = Column(Integer, Sequence('user_id_seq'),
+    id = Column(Integer, unique=True,
                 nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-    fullname = Column(String(50))
