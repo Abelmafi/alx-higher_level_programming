@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This script lists all State objects with the name passed as
 argument from database hbtn_0e_6_usa """
-from relationship_state import State, Base
+from relationship_state import State
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     session = Session()
 
     new_state = State(name="California")
-    new_state.cities = [City(name="San Fransisco")]
+    new_state.cities = [City(name="San Francisco")]
     session.add(new_state)
     session.commit()
     session.close()
