@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""..."""
+""" This script lists all State objects with the name passed as
+argument from database hbtn_0e_6_usa """
 from model_state import State, Base
 from model_city import City
 from sqlalchemy.orm import sessionmaker

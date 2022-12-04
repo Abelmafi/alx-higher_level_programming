@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+"""..."""
 from model_state import Base
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String, Integer
-from sqlalchemy import ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey
 
 
 class City(Base):
