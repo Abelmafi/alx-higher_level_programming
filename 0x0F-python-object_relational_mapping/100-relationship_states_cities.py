@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This script lists all State objects with the name passed as
 argument from database hbtn_0e_6_usa """
-from relationship_state import State
+from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
