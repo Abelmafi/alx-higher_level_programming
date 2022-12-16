@@ -11,8 +11,8 @@ if __name__ == '__main__':
         id_value = argv[1]
     else:
         id_value = ""
-    data = {'id': id_value}
-    req = request.post(url, json=data)
+    data = {'q': id_value}
+    req = request.post(url, data=data)
     try:
         __dict = req.json()
         if __dict == {}:
