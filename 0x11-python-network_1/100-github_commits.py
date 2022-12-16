@@ -10,12 +10,11 @@ if __name__ == '__main__':
     respo = sys.argv[1]
     user = sys.argv[2]
 
-    url = "https://api.github.com/repos/{}/{}/commits".format(respo, user)
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(respo, user)
     req = requests.get(url)
     count = 0
     for i in req.json():
-        print("{}: {}".format(i.get('sha'),
-              i.get('commit').get('author').get('name')))
+        print(i.get('sha') + ": " + i.get('commit').get('author').get('name'))
         count += 1
         if count == 10:
             break
