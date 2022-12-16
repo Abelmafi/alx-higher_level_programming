@@ -3,7 +3,7 @@
 to http://0.0.0.0:5000/search_user with the letter as a parameter."""
 def get_url(url):
     response = requests.get(url)
-    req.raise_for_status()
+    response.raise_for_status()
     return response.raw
 
 if __name__ == '__main__':
