@@ -9,5 +9,4 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
     with urllib.request.urlopen(url) as res:
-        output = res.read()
-        print(output.headers.get('X-Request-Id'))
+        print(res.headers['X-Request-Id'])
