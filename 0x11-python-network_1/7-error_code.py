@@ -9,6 +9,7 @@ if __name__ == '__main__':
     url = argv[1]
     try:
         req = requests.get(url)
+        req.raise_for_status()
         print(req.text)
     except requests.exceptions.HTTPError as e:
-        print("Error code: {}".format(e.response.status_code))
+        print("Error code: {}".format(e.status_code))
