@@ -12,12 +12,12 @@ if __name__ == '__main__':
     else:
         id_value = ""
     data = {'q': id_value}
-    req = request.post(url, data=data)
+    req = requests.post(url, data=data)
     try:
-        __dict = req.json()
-        if __dict == {}:
+        _dict = req.json()
+        if _dict == {}:
             print("No result")
         else:
-            print("[{}] {}".format(__dict.get('id'), __dict.get('name')))
+            print("[{}] {}".format(_dict.get('id'), _dict.get('name')))
     except ValueError:
         print("Not a valid JSON")
