@@ -14,7 +14,8 @@ if __name__ == '__main__':
     req = requests.get(url)
     count = 0
     for i in req.json():
-        print("{}: {}".format(i.get('sha'), i.get('commit').get('author').get('name')))
+        print("{}: {}".format(i.get('sha'),
+              i.get('commit').get('author').get('name')))
         count += 1
         if count == 10:
             break
