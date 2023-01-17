@@ -7,8 +7,8 @@ request(url, (error, response, body) => {
   if (error) { console.log(error); }
   let count = 0;
   for (const result of JSON.parse(body).results) {
-    for (const character of result.characters) {
-      if (character === urll) {
+    for (const characterURL of result.characters) {
+      if (characterURL.includes(18)) {
         count++;
       }
     }
