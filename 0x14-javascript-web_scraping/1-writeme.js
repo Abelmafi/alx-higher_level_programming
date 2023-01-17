@@ -1,4 +1,4 @@
-#!/use/bin/node
+#!/usr/bin/node
 const fs = require('fs');
 const filepath = process.argv[2];
 const Fwrite = process.argv[3];
