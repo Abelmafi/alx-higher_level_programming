@@ -1,6 +1,8 @@
 # Higher-Level Programming with Python
 
-![ALX Africa Logo](http://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
+<div style="background-color: #000; padding: 10px;">
+  <img src="http://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png" alt="ALX Africa Logo">
+</div>
 
 Welcome to my repository for the higher-level programming track at ALX Africa. In this collection of projects, which I started in the fourth month of my first year at ALX, I've been delving into the world of Python while simultaneously enhancing my skills in C and shell scripting. Below is the list of specific projects included in this repository:
 
